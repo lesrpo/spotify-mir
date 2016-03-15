@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	$(".songs").load("javascript/handlebars/songsTemplate.html"); 
+
 	$("#search").on("keydown", function(){
 		if(event.which == 13){ 
 			var url= validateUrl($(this).val());    		

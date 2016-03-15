@@ -1,45 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Spotify Preview</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-6 col-sm-offset-3">
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<h1>Spotify Preview</h1>
-						<input type="text" id="search" class="form-control" placeholder="Busca una cancion o artista">
-						<div class="songs"></div>
-						<script type="text/x-handlebars-template" id="songsList">
-						  	{{#each items}}
-								<div class="media">
-									<div class="media-left">
-										<img class="media-object song-img" src="{{ album.images.[0].url }}"/>
-									</div>
-									<div class="media-body">
-										<h3 class="media-heading">{{ name }}</h3>
-										<span> {{ artists.[0].name }}</span>
-										<div class="preview-song">
-											<audio controls>
-											  <source src="{{ preview_url }}" type="audio/mp3">
-											</audio>
-										</div>
-									</div>
-								</div>
-							{{/each}}
-					  	</script>
+	<head>
+		<title>Spotify Preview</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h1>Spotify Preview</h1>
+							<input type="text" id="search" class="form-control" placeholder="Busca una cancion o artista">
+							<div class="songs"></div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
-  	<script type="text/javascript" src="javascript/js.js"></script>
-</body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+	  	<script type="text/javascript" src="javascript/js.js"></script>
+	</body>
 </html>
